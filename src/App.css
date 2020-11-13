@@ -1,3 +1,58 @@
-ul {
-  list-style-type: square;
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  border-style: none;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.app-wrapper {
+  display: grid;
+
+  grid-template-areas:
+    "header header"
+    "aside main";
+
+  grid-template-rows: 150px 1fr;
+  grid-template-columns: 3fr 10fr;
+  grid-gap: 10px;
+}
+
+.header {
+  grid-area: header;
+  background-color: rgb(50, 76, 80);
+}
+.profile__logo {
+  border: 5px solid #ffffff;
+}
+
+.aside {
+  grid-area: aside;
+  background-color: royalblue;
+}
+
+.main {
+  grid-area: main;
+}
+
+.content {
+  padding-top: 300px;
+  background-color: rgb(255, 220, 195);
+  background-image: url(./images/bg.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
 }
